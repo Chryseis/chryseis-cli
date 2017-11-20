@@ -3,7 +3,7 @@
 quickly build front-end template
 ## Start
 ```
-npm i chrys-cli -g
+npm i chryseis-cli -g
 ```
 ## Usage
 ```
