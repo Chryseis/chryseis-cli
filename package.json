@@ -1,0 +1,30 @@
+{
+  "name": "chrys-cli",
+  "version": "0.0.1",
+  "description": "create front-end template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "chrys": "bin/chrys.js",
+    "chrys-init": "bin/chrys-init.js"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "website"
+  ],
+  "author": "allen",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "download-git-repo": "^1.0.1"
+  },
+  "dependencies": {
+    "inquirer": "^4.0.0",
+    "ora": "^1.3.0",
+    "rimraf": "^2.6.2"
+  }
+}
