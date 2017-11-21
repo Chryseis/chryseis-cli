@@ -33,10 +33,13 @@ program.on('--help', function () {
  * */
 if (program.args.length < 2) return program.help();
 
+/*template name*/
 let template = program.args[0];
 
+/*project name*/
 let projectName = program.args[1];
 
+/*dist*/
 let to = path.resolve(projectName);
 
 console.log();
@@ -44,6 +47,7 @@ process.on('exit', function () {
     console.log();
 });
 
+/*ask user override?*/
 if (exists(to)) {
     inquirer.prompt([{
         type: 'confirm',
@@ -58,7 +62,7 @@ if (exists(to)) {
     run()
 }
 
-
+/*download template*/
 function run() {
     const spinner = ora('downloading template')
     if (exists(to)) rm(to);
