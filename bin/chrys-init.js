@@ -72,7 +72,7 @@ function run() {
             console.log(chalk.red('download error!'));
             process.exit(1);
         }
-        console.log(chalk.green('    download success!',));
+        console.log(chalk.green('    download success!'));
         console.log(chalk.green(`    plz cd  ${to}`));
         console.log(chalk.green('    $npm install '));
         console.log(chalk.green('    $npm start '));
