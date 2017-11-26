@@ -23,7 +23,7 @@ program
 program.on('--help', function () {
     console.log(' Examples:');
     console.log();
-    console.log(chalk.gray('    # create a new react frame'))
+    console.log(chalk.gray('    # create a new front-end frame'))
     console.log(chalk.green('   $ chrys init website my-project or $ chrys init react my-project'))
     console.log()
 });
