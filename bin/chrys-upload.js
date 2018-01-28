@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var ftp = require('ftp');
 var upyun = require('upyun');
 var program = require('commander');
@@ -11,7 +10,6 @@ var walk = require("walk");
 var path = require("path");
 var pkg = require(process.cwd() + '/package.json');
 var c = new ftp();
-var serverSubmit = require('../lib/submit.js');
 
 program.usage('<upload-server> [upload-dir]');
 
@@ -78,7 +76,7 @@ if (serverName == "test") {
         var jsPathArr = [];
         //上传文件
         files.forEach(function (item) {
-            var subPath = item.replace(/\/dist/, "");
+            var subPath = program.args[1] ? item.replace(program.args[1], "") : item.replace(/\/dist/, "");
             var rPath = `${uploadConfig.target}${subPath}`;
 
             var filePath = path.join(process.cwd(), item);
@@ -153,8 +151,9 @@ if (serverName == "test") {
                                         formData.push(obj);
                                     }
 
-                                    isSubmitUpyun && serverSubmit.init(formData);
-
+                                    if(isSubmitUpyun){
+                                        require('../lib/submit.js').init(formData);
+                                    }
                                 }
                             });
                     });
@@ -221,7 +220,9 @@ if (serverName == "test") {
                                         formData.push(obj);
                                     }
 
-                                    isSubmitUpyun && serverSubmit.init(formData);
+                                    if(isSubmitUpyun){
+                                        require('../lib/submit.js').init(formData);
+                                    }
                                 }
                             });
 
@@ -300,7 +301,7 @@ function uploadFile(data, c) {
                         obj.url = `${jsServerUrl}${jsFileList[0]}`;
                         formData.push(obj);
                     }
-                    serverSubmit.init(formData);
+                    isSubmitUpyun && require('../lib/submit.js').init(formData);
 
                 }
                 c.end();
