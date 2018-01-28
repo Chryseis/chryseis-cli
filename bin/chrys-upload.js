@@ -34,6 +34,7 @@ program.parse(process.argv);
 if (program.args.length < 1)
     return program.help();
 var serverName = program.args[0];
+var isSubmitUpyun = program.args[2] || true;
 var uploadConfig;
 if (serverName == "test") {
     uploadConfig = pkg.testServer;
@@ -152,7 +153,7 @@ if (serverName == "test") {
                                         formData.push(obj);
                                     }
 
-                                    serverSubmit.init(formData);
+                                    isSubmitUpyun && serverSubmit.init(formData);
 
                                 }
                             });
@@ -220,7 +221,7 @@ if (serverName == "test") {
                                         formData.push(obj);
                                     }
 
-                                    serverSubmit.init(formData);
+                                    isSubmitUpyun && serverSubmit.init(formData);
                                 }
                             });
 
