@@ -139,7 +139,7 @@ if (serverName == "test") {
                                                 obj.name = "PC"
                                             }
                                             obj.type = `Js`;
-                                            obj.url = `https://fe.yingyinglicai.com${item}`;
+                                            obj.url = `https://fuckyourmother.com${item}`;
 
                                             formData.push(obj);
                                         })
@@ -147,7 +147,7 @@ if (serverName == "test") {
                                     } else {
                                         var obj = {};
                                         obj.name = "H5";
-                                        obj.url = `https://fe.yingyinglicai.com${jsPathArr[0]}`;
+                                        obj.url = `https://fuckyourmother.com${jsPathArr[0]}`;
                                         formData.push(obj);
                                     }
 
@@ -185,7 +185,7 @@ if (serverName == "test") {
                                     console.log(chalk.white(`   https://ami-static.b0.upaiyun.com/active2016/base/flexible.js`));
 
                                     jsPathArr.forEach(function (item) {
-                                        console.log(chalk.white(`   https://fe.yingyinglicai.com${item}`));
+                                        console.log(chalk.white(`   https://fuckyourmother.com${item}`));
                                     });
 
                                     console.log();
@@ -208,7 +208,7 @@ if (serverName == "test") {
                                                 obj.name = "PC"
                                             }
                                             obj.type = `Js`;
-                                            obj.url = `https://fe.yingyinglicai.com${item}`;
+                                            obj.url = `https://fuckyourmother.com${item}`;
 
                                             formData.push(obj);
                                         })
@@ -216,7 +216,7 @@ if (serverName == "test") {
                                     } else {
                                         var obj = {};
                                         obj.name = "H5";
-                                        obj.url = `https://fe.yingyinglicai.com${jsPathArr[0]}`;
+                                        obj.url = `https://fuckyourmother.com${jsPathArr[0]}`;
                                         formData.push(obj);
                                     }
 
