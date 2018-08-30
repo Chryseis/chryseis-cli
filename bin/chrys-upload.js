@@ -151,7 +151,7 @@ if (serverName == "test") {
                                         formData.push(obj);
                                     }
 
-                                    if(isSubmitUpyun){
+                                    if (isSubmitUpyun) {
                                         require('../lib/submit.js').init(formData);
                                     }
                                 }
@@ -220,7 +220,7 @@ if (serverName == "test") {
                                         formData.push(obj);
                                     }
 
-                                    if(isSubmitUpyun){
+                                    if (isSubmitUpyun) {
                                         require('../lib/submit.js').init(formData);
                                     }
                                 }
